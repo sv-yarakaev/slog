@@ -16,4 +16,6 @@ void fill_view(GtkWidget *);
 GtkWidget *create_view_and_model(GtkWidget *view, app_widgets *widgets);
 static GtkTreeModel *create_and_fill_model(void);
 void on_changed(GtkWidget *widget, gpointer statusbar);
+void on_changed_w(GtkWidget *widget, gpointer window);
+app_widgets *local_w;
 #endif//SLOG_W_TARM_UI_H

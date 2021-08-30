@@ -8,6 +8,7 @@ GtkWidget *create_view_and_model(GtkWidget *view, app_widgets *widgets) {
     GtkTreeViewColumn *col;
     GtkCellRenderer *renderer;
     GtkTreeModel *model;
+    local_w = widgets;
 
     col = gtk_tree_view_column_new();
 
@@ -76,7 +77,26 @@ void on_changed(GtkWidget *widget, gpointer statusbar) {
         gtk_statusbar_push(GTK_STATUSBAR(statusbar),
                            gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar),
                                                         value), value);
-        gtk_window_set_title(GTK_WINDOW(widgets->window), value);
+
+        //gtk_window_set_title(GTK_WINDOW(statusbar), value);
+        g_free(value);
+    }
+}
+void on_changed_w(GtkWidget *widget, gpointer window) {
+    GtkTreeIter iter;
+    GtkTreeModel *model;
+    gchar *value;
+
+    g_print("on changed window loaded.\n");
+    if (gtk_tree_selection_get_selected(
+                GTK_TREE_SELECTION(widget), &model, &iter)) {
+
+        gtk_tree_model_get(model, &iter, COLUMN, &value, -1);
+        //gtk_statusbar_push(GTK_STATUSBAR(statusbar),
+        //                   gtk_statusbar_get_context_id(GTK_STATUSBAR(statusbar),
+        //                                                value), value);
+
+        gtk_window_set_title(GTK_WINDOW(window), value);
         g_free(value);
     }
 }

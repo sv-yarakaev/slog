@@ -7,6 +7,7 @@
     <property name="default-width">640</property>
     <property name="default-height">480</property>
     <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
+    <signal name="window-state-event" handler="on_mainWindow_window_state_event" swapped="no"/>
     <child>
       <object class="GtkBox" id="mainVBox">
         <property name="visible">True</property>
@@ -244,6 +245,7 @@
                     <child internal-child="selection">
                       <object class="GtkTreeSelection" id="selectTreeMachines">
                         <signal name="changed" handler="on_changed" object="mainStatusBar" swapped="no"/>
+                        <signal name="changed" handler="on_changed_w" object="mainWindow" swapped="no"/>
                       </object>
                     </child>
                   </object>

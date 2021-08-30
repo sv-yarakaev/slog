@@ -14,5 +14,5 @@ typedef struct {
     GtkWidget *mainNotes;
 } app_widgets;
 
-app_widgets *widgets = g_slice_new(app_widgets);
+//app_widgets *widgets = g_slice_new(app_widgets);
 #endif//SLOG_WINDOW_H
