@@ -245,6 +245,7 @@
                     <child internal-child="selection">
                       <object class="GtkTreeSelection" id="selectTreeMachines">
                         <signal name="changed" handler="on_changed" object="mainStatusBar" swapped="no"/>
+                        <signal name="changed" handler="on_changed_note" object="mainNotes" swapped="no"/>
                         <signal name="changed" handler="on_changed_w" object="mainWindow" swapped="no"/>
                       </object>
                     </child>

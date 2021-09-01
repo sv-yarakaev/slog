@@ -23,5 +23,5 @@ configure_file(main.xml main.xml COPYONLY)
 
 
 add_definitions (${GTK3_CFLAGS_OTHER})
-add_executable(${PROJECT_NAME} main.c w_tarm_ui.c window.c)
+add_executable(${PROJECT_NAME} main.c w_tarm_ui.c window.c signal_note.c)
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${GTK3_LIBRARIES} ${GLIB_LIBRARIES}  ${JSON-GLIB_LIBRARIES} -export-dynamic)

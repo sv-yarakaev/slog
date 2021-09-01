@@ -1,6 +1,7 @@
 #include <gtk/gtk.h>
 #include "w_tarm_ui.h"
 #include "window.h"
+#include "signal_note.h"
 
 #define MAIN_UI "main.xml"
 #define TREE_ARMS "treeMachines"
@@ -46,6 +47,6 @@ void on_window_main_destroy() {
     gtk_main_quit();
 }
 
-void on_mainWindow_window_state_event(GtkWidget* self,GdkEventWindowState event, gpointer ues)  {
+void on_mainWindow_window_state_event(GtkWidget* self, GdkEventWindowState event, gpointer ues)  {
     gtk_window_fullscreen(GTK_WINDOW(self));
 }
