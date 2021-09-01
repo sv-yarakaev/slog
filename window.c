@@ -4,10 +4,10 @@
 
 #include "window.h"
 
-typedef struct {
-    GtkWidget *window;
-    GtkWidget *view;
-    GtkWidget *statusbar;
-    GtkTreeSelection *selection;
-    GtkWidget *mainNotes;
-} app_widgets;
+//typedef struct {
+//    GtkWidget *window;
+//    GtkWidget *view;
+//    GtkWidget *statusbar;
+//    GtkTreeSelection *selection;
+//    GtkWidget *mainNotes;
+//} app_widgets;
